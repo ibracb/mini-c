@@ -18,7 +18,7 @@
 
 ## Descripción
 
-**MiniC** es un compilador para un subconjunto simplificado del lenguaje C. Dado un programa fuente `.mc`, lo traduce a código ensamblador **MIPS**, que puede ejecutarse con el emulador **SPIM**.
+Compilador para un subconjunto simplificado del lenguaje de programación C, denominado **MiniC**. Dado un programa fuente basado en MiniC, lo traduce a código ensamblador **MIPS**, que puede ejecutarse con el emulador **SPIM**.
 
 El compilador está construido con las herramientas clásicas del proceso de compilación:
 
