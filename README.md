@@ -5,6 +5,7 @@
 ![Bison](https://img.shields.io/badge/Bison-purple?style=flat)
 ![SPIM](https://img.shields.io/badge/SPIM-teal?style=flat)
 ![Salida: MIPS](https://img.shields.io/badge/Salida-MIPS-orange?style=flat)
+![Universidad de Murcia](https://img.shields.io/badge/Universidad%20de%20Murcia-E03B23?style=flat&logo=graduation-cap&logoColor=white)
 
 **Autoría:**
 - [Ibrahim Cherif Barry](https://github.com/ibracb)
@@ -119,15 +120,19 @@ La precedencia y asociatividad de los operadores se define en Bison: `+`/`-` aso
 
 ## Estructura del repositorio
 
-| Fichero | Descripción |
-|---------|-------------|
-| `proyecto/lexico1.l` | Analizador léxico (Flex). |
-| `proyecto/miniC.y` | Gramática, análisis sintáctico y semántico, y generación de código (Bison). |
-| `proyecto/main.c` | Punto de entrada del ejecutable. |
-| `proyecto/listaSimbolos.h` / `.c` | Tabla de símbolos. |
-| `proyecto/listaCodigo.h` / `.c` | Gestión de listas de instrucciones. *(Ver requisitos.)* |
-| `proyecto/Makefile` | Compilación y ejecución. |
-| `proyecto/entrada.mc` | Programa de ejemplo. |
+```
+mini-c/
+├── proyecto/              # Núcleo del compilador (analizadores y generación de código)
+│   ├── Makefile             # Compilación y ejecución
+│   ├── entrada.mc           # Programa de ejemplo
+│   ├── lexico1.h/.l         # Analizador léxico (Flex) y su cabecera generada
+│   ├── listaCodigo.c/.h     # Gestión de listas de instrucciones (implementación y definición)
+│   ├── listaSimbolos.c/.h   # Tabla de símbolos (implementación y definición)
+│   ├── main.c               # Punto de entrada del ejecutable
+│   └── miniC.y              # Gramática + análisis sintáctico/semántico + generación de código (Bison)
+├── .gitignore               # Ficheros ignorados por git
+└── README.md                # Documentación del proyecto
+```
 
 ---
 
@@ -139,8 +144,6 @@ Para compilar y ejecutar el proyecto necesitas:
 - **Bison**
 - **gcc**
 - **SPIM** (para ejecutar el ensamblador generado)
-
-> **Importante:** la compilación depende de los ficheros `listaCodigo.h` y `listaCodigo.c`, que no se incluyen en este repositorio porque no se han modificado. Debes añadirlos a `proyecto/` antes de compilar.
 
 ---
 
