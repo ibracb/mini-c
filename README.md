@@ -21,7 +21,7 @@
 
 Compilador para un subconjunto simplificado del lenguaje de programación C, denominado **MiniC**. Dado un programa fuente basado en MiniC, lo traduce a código ensamblador **MIPS**, que puede ejecutarse con el emulador **SPIM**.
 
-El compilador está construido con las herramientas clásicas del proceso de compilación:
+El compilador está construido con las siguientes herramientas para el proceso de compilación:
 
 - **Flex** — analizador léxico: divide el código fuente en tokens (palabras clave, operadores, identificadores, etc.).
 - **Bison** — analizador sintáctico y semántico: verifica que la secuencia de tokens se ajusta a la gramática y realiza las comprobaciones semánticas.
@@ -45,7 +45,7 @@ El compilador está construido con las herramientas clásicas del proceso de com
 
 ## Pipeline de compilación
 
-El compilador sigue las fases clásicas de la compilación:
+El compilador sigue las siguientes fases:
 
 ```mermaid
 flowchart LR
@@ -355,4 +355,4 @@ El compilador mantiene tres contadores de errores independientes:
 - **Errores sintácticos:** secuencias de tokens que no se ajustan a la gramática.
 - **Errores semánticos:** variables no declaradas, reasignación de constantes, constantes duplicadas, etc.
 
-Al final del análisis se muestran los totales de cada tipo. Solo si no hay errores se genera el código MIPS; en caso contrario, la compilación se aborta sin generar ensamblador.
+Al final del análisis se muestran los totales de cada tipo. Solo si no hay errores se genera el código MIPS; en caso contrario, la compilación se aborta sin generar el código ensamblador.
